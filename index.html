@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="apple-itunes-app" content="app-id=1380041207"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Frame Wallpaper for Unsplash</title>
+
+    <style data-strip-on-export>
+        [contentEditable] {
+            outline: none;
+        }
+        #controls {
+            position: fixed;
+            /*background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0));*/
+            padding: 10px;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            text-align: right;
+            z-index: 10;
+        }
+        #controls button {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            color: black;
+            background-color: white;
+            padding: 0.5em;
+            font-weight: bold;
+            border: none;
+            box-shadow: 0px 0px 3px gray;
+        }
+        #controls button:hover {
+            background-color: #eee;
+        }
+    </style>
+    <script data-strip-on-export>
+        var id = "1380041207";
+        function exportHTML(route) {
+            var toStrip = document.querySelectorAll('[data-strip-on-export]');
+            for (var i=0; i<toStrip.length; i++) {
+                toStrip[i].parentElement.removeChild(toStrip[i]);
+            }
+            document.getElementById('content').removeAttribute('contentEditable');
+            var html = document.querySelector("html").outerHTML;
+            var form = document.createElement('form');
+            form.action = "/export";
+            form.method = "POST";
+            form.target = "_blank";
+            var setVal = function(name, val) {
+                var input = document.createElement("input");
+                input.type = "hidden";
+                input.name = name;
+                input.value = val;
+                form.appendChild(input);
+            }
+            setVal("html", html);
+            setVal("id", id);
+            setVal("route", route);
+            setVal("name", document.title);
+            form.style.display = "none";
+            document.body.appendChild(form);
+            form.submit();
+        }
+    </script>
+
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+    <style>
+        @import url(http://fonts.googleapis.com/css?family=Raleway);
+
+        html, body, #content {
+            margin: 0px;
+            height: 100%;
+            font-family: sans-serif;
+            font-weight: lighter;
+            color: #2e2d2f;
+            background-color: #f3f3f4;
+            text-align: center;
+            line-height: 1.4;
+        }
+        #splash {
+            height: 100%;
+            width: 100%;
+            display: table;
+            table-layout: fixed;
+            max-width: 700px;
+            margin: auto;
+            position: relative;
+        }
+        @media screen and (min-width: 700px) {
+            #splash > div {
+                display: table-cell;
+                vertical-align: middle;
+                padding: 1em;
+                height: 100%;
+            }
+            #splash #left {
+                text-align: right;
+            }
+            #splash #right {
+                text-align: left;
+            }
+            #splash .iphone {
+                width: 288px;
+                height: 576px;
+            }
+            #screenshots img {
+                max-width: 200px;
+            }
+            #like-container {
+                position: absolute;
+                top: 100%;
+                right: 20px;
+                margin-top: -50px;
+            }
+        }
+        #chevron {
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            margin-top: -2em;
+            color: #2e2d2f;
+            opacity: 0.5;
+            margin-left: -0.5em;
+        }
+        @media screen and (max-width: 700px) {
+            #chevron {
+                display: none;
+            }
+            #splash .iphone {
+                width: 192px;
+                height: 384px;
+                display: inline-block;
+            }
+            #splash #left {
+                padding: 10px;
+            }
+            #screenshots img {
+                max-width: 100px;
+            }
+            #splash .appstore {
+                display: none;
+            }
+        }
+        img.appstore {
+            max-width: 120px;
+        }
+        .iphone {
+            background-image: url('http://app-stop.appspot.com/static/5s.png');
+            background-size: contain;
+            position: relative;
+            width: 720px;
+            height: 1440px;
+        }
+        .iphone img {
+            position: absolute;
+            top: 17.9%;
+            left: 14%;
+            width: 73%;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Raleway", sans-serif;
+            font-weight: normal;
+        }
+        #icon-row {
+            margin: 30px;
+            margin-top: 40px;
+            margin-bottom: 80px;
+            border-bottom: 1px solid rgba(0,0,0,0.3);
+            position: relative;
+        }
+        #icon-row #icon-container {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            left: 50%;
+            top: 50%;
+            margin-left: -50px;
+            margin-top: -50px;
+            border: 10px solid #f3f3f4;
+        }
+        #icon-row img {
+            width: 100%;
+            border-radius: 19px;
+            box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+        }
+        #description {
+            margin: auto;
+            width: 90%;
+            max-width: 600px;
+        }
+        #screenshots {
+            margin-bottom: 2em;
+        }
+        #screenshots img {
+            border: 1px solid white;
+            box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+            margin: 1em;
+        }
+        #description {
+            white-space: pre-wrap;
+        }
+        #stars {
+            text-align: center;
+            font-style: italic;
+            font-size: small;
+        }
+        #stars span {
+            display: block;
+            font-size: 30px;
+            font-style: normal;
+        }
+        #attribution {
+            font-size: small;
+            padding: 2em;
+        }
+        #attribution a {
+            color: #2e2d2f;
+        }
+    </style>
+
+
+</head>
+<body>
+
+
+<div id='content'>
+
+
+    <div id='chevron' class='fa fa-chevron-down'></div>
+    <div id='splash'>
+        <div id='left'>
+            <h1>Frame Wallpaper</h1>
+            <p>Frame collects beautiful free photos and offer you advice to choose the wallpaper.</p>
+            <a href='https://itunes.apple.com/cn/app/id1380041207?mt=8'><img class='appstore' src='http://app-stop.appspot.com/static/appstore.svg' alt='Download on the Apple App Store'/></a>
+        </div>
+        <div id='right'>
+            <div class='iphone'>
+                <img src='https://is2-ssl.mzstatic.com/image/thumb/Purple128/v4/fe/c3/1c/fec31c09-ecec-a514-b5b0-53d3bf78a86c/source/392x696bb.jpg'/>
+            </div>
+        </div>
+    </div>
+
+    <div id='icon-row'>
+        <div id='icon-container'>
+            <img src='https://is1-ssl.mzstatic.com/image/thumb/Purple128/v4/e4/58/58/e4585869-2644-5516-abf8-3063ac808633/source/512x512bb.jpg'/>
+        </div>
+    </div>
+
+    <div id='screenshots'>
+
+        <img src=https://is4-ssl.mzstatic.com/image/thumb/Purple128/v4/e5/a3/7a/e5a37a94-d898-aa3b-dff9-277bf0cf1c2a/source/392x696bb.jpg />
+
+        <img src=https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/a0/f2/e4/a0f2e498-d306-0130-d547-f762aadda5c5/source/392x696bb.jpg />
+
+        <img src=https://is1-ssl.mzstatic.com/image/thumb/Purple128/v4/b5/4c/dd/b54cddab-0af1-6621-6427-8d75d0d332df/source/392x696bb.jpg />
+
+        <img src=https://is2-ssl.mzstatic.com/image/thumb/Purple128/v4/0c/8e/1e/0c8e1eda-490e-44a1-ced3-5edf0d9966ed/source/392x696bb.jpg />
+
+        <img src=https://is3-ssl.mzstatic.com/image/thumb/Purple128/v4/a6/51/d0/a651d0b4-6be9-c332-3da3-b310f6a5c006/source/392x696bb.jpg />
+
+        <img src=https://is2-ssl.mzstatic.com/image/thumb/Purple128/v4/70/04/75/700475c0-36cc-bee7-eaab-7ac9ec7aabad/source/392x696bb.jpg />
+
+        <img src=https://is1-ssl.mzstatic.com/image/thumb/Purple128/v4/d8/df/a2/d8dfa242-edb1-251b-ec65-bc460b01891f/source/392x696bb.jpg />
+
+        <img src=https://is5-ssl.mzstatic.com/image/thumb/Purple118/v4/43/ee/f4/43eef43c-b2c7-e05a-f4f6-6c15d774ecbe/source/392x696bb.jpg />
+
+        <img src=https://is4-ssl.mzstatic.com/image/thumb/Purple118/v4/14/06/e4/1406e444-4535-ae66-ebd2-c23094f3eef6/source/392x696bb.jpg />
+
+    </div>
+
+
+    <p id='stars'><span>★★★★★</span> App Store Rating</p>
+
+
+    <p id='description'>Frame collects beautiful free photos and offer you advice to choose the wallpaper. <br /><br />You can share each photography and story behind the work with friends.<br /><br />Please feel free to save or use each photography in Frame. All photos in Frame are displayed with the hyperlink to Unsplash.com.<br /><br />Unsplash.com is a great community with free high-resolution photos licensed under CC0. You can see more details about the license in Frame.<br /><br />If you have any advice or idea, please let us know it via Email or Twitter direct messages.<br /><br />Email: dintu@outlook.com<br />Twitter: @Jinnnya<br /><br />Enjoy it!
+    </p>
+
+    <p>
+        <a href='https://itunes.apple.com/cn/app/id1380041207?mt=8'><img class='appstore' src='http://app-stop.appspot.com/static/appstore.svg' alt='Download on the Apple App Store'/></a>
+    </p>
+
+    <p id='copyright'>&copy; 2018 Jinya</p>
+
+    <p id='attribution'>  </p>
+
+
+</div>
+
+</body>
+</html>
